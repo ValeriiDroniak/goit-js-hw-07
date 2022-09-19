@@ -13,7 +13,7 @@ const instanceBox = basicLightbox.create(`
     }
 }
 );
-const imageOriginalSize = instanceBox.element().querySelector('.original-img');
+const originalImage = instanceBox.element().querySelector('.original-img');
 
 galleryRef.addEventListener('click', onImageListenerKlick);
 galleryRef.innerHTML = createGalleryMarkup(galleryItems);
@@ -37,7 +37,7 @@ function onImageListenerKlick(event) {
 
     event.preventDefault();
 
-    imageOriginalSize.src = event.target.dataset.source;
+    originalImage.src = event.target.dataset.source;
     instanceBox.show();
 }
 
